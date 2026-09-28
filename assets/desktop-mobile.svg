@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1000" viewBox="0 0 640 1000" role="img" aria-labelledby="title desc"><title id="title">ThierryOS Mobile</title><desc id="desc">Reduced-motion preferences disable animation</desc><defs>
+  <linearGradient id="wall" x2="1" y2="1"><stop stop-color="#0d1526" /><stop offset=".48" stop-color="#252235" /><stop offset="1" stop-color="#132c38" /></linearGradient>
+  <radialGradient id="ember"><stop stop-color="#f9a268" /><stop offset=".35" stop-color="#db6b62" /><stop offset=".7" stop-color="#75476a" stop-opacity=".7" /><stop offset="1" stop-color="#332743" stop-opacity="0" /></radialGradient>
+  <radialGradient id="blue"><stop stop-color="#74cabd" stop-opacity=".72" /><stop offset=".45" stop-color="#418da5" stop-opacity=".5" /><stop offset="1" stop-color="#263c62" stop-opacity="0" /></radialGradient>
+  <linearGradient id="ribbon" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ffcf9b" stop-opacity=".68" /><stop offset=".5" stop-color="#bd7175" stop-opacity=".32" /><stop offset="1" stop-color="#38315d" stop-opacity="0" /></linearGradient>
+  <linearGradient id="panel" x2=".5" y2="1"><stop stop-color="#242737" /><stop offset="1" stop-color="#151c2b" /></linearGradient>
+  <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#34445a" stop-opacity=".97" /><stop offset="1" stop-color="#142936" stop-opacity=".99" /></linearGradient>
+  <radialGradient id="core"><stop stop-color="#f3fffa" /><stop offset=".32" stop-color="#afffe0" /><stop offset=".68" stop-color="#6cdbc7" stop-opacity=".34" /><stop offset="1" stop-color="#70ecd1" stop-opacity="0" /></radialGradient>
+  <linearGradient id="dock" x2="0" y2="1"><stop stop-color="#e9edff" stop-opacity=".22" /><stop offset="1" stop-color="#becada" stop-opacity=".1" /></linearGradient>
+  <linearGradient id="folder" x2="0" y2="1"><stop stop-color="#8bcbff" /><stop offset="1" stop-color="#528ff0" /></linearGradient>
+  <filter id="shadow" x="-30%" y="-40%" width="160%" height="200%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#070b17" flood-opacity=".38" /></filter>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" /></filter>
+</defs><style>
+  text { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; }
+  .mono { font-family: "SFMono-Regular",Consolas,"Liberation Mono",monospace; }
+  .terminal-motion,.jarvis-motion,.projects-motion { transform-box:fill-box; transform-origin:50% 100%; }
+  .terminal-motion { animation:terminal-open 18s infinite; }
+  .jarvis-motion { animation:jarvis-open 18s infinite; }
+  .projects-motion { animation:projects-open 18s infinite; }
+  .typed { animation:typing 18s steps(22,end) infinite; }
+  .output-one { animation:line-one 18s infinite; }
+  .output-two { animation:line-two 18s infinite; }
+  .output-three { animation:line-three 18s infinite; }
+  .cursor { animation:blink 1.1s steps(1,end) infinite; }
+  .spin { animation:spin 24s linear infinite; transform-origin:0px 0px; }
+  .counterspin { animation:spin 36s linear reverse infinite; transform-origin:0px 0px; }
+  .core-pulse { animation:breathe 4s ease-in-out infinite; }
+  .notification { animation:notify 18s infinite; }
+  .dock-terminal { animation:dock-bounce 18s infinite; }
+  @keyframes terminal-open {
+    0%,3% { opacity:0; transform:translate(-80.5px,385px) scale(.07,.015); }
+    8% { opacity:1; transform:translate(0,-7px) scale(1.025,1.035); }
+    10%,86% { opacity:1; transform:translate(0,0) scale(1); }
+    91%,100% { opacity:0; transform:translate(-80.5px,385px) scale(.07,.015); }
+  }
+  @keyframes jarvis-open {
+    0%,7% { opacity:0; transform:translate(-3.5px,76px) scale(.1,.018); }
+    12% { opacity:1; transform:translate(0,-6px) scale(1.025,1.03); }
+    14%,84% { opacity:1; transform:translate(0,0) scale(1); }
+    89%,100% { opacity:0; transform:translate(-3.5px,76px) scale(.1,.018); }
+  }
+  @keyframes projects-open {
+    0%,11% { opacity:0; transform:translate(150px,52px) scale(.08,.018); }
+    16% { opacity:1; transform:translate(0,-5px) scale(1.018,1.035); }
+    18%,82% { opacity:1; transform:translate(0,0) scale(1); }
+    87%,100% { opacity:0; transform:translate(150px,52px) scale(.08,.018); }
+  }
+  @keyframes typing { 0%,12% {clip-path:inset(0 100% 0 0)} 23%,88% {clip-path:inset(0 0 0 0)} 91%,100% {clip-path:inset(0 100% 0 0)} }
+  @keyframes line-one {0%,24%{opacity:0} 25%,88%{opacity:1} 91%,100%{opacity:0}}
+  @keyframes line-two {0%,28%{opacity:0} 29%,88%{opacity:1} 91%,100%{opacity:0}}
+  @keyframes line-three {0%,32%{opacity:0} 33%,88%{opacity:1} 91%,100%{opacity:0}}
+  @keyframes blink {0%,55%{opacity:1} 56%,100%{opacity:0}}
+  @keyframes spin {to{transform:rotate(360deg)}}
+  @keyframes breathe {0%,100%{opacity:.7}50%{opacity:1}}
+  @keyframes notify {0%,35%{opacity:0;transform:translateX(28px)}38%,81%{opacity:1;transform:translateX(0)}85%,100%{opacity:0;transform:translateX(28px)}}
+  @keyframes dock-bounce {0%,2%,8%,100%{transform:translateY(0)}4%{transform:translateY(-14px)}6%{transform:translateY(-5px)}}
+  @media (prefers-reduced-motion:reduce) {
+    .terminal-motion,.jarvis-motion,.projects-motion,.typed,.output-one,.output-two,.output-three,.cursor,.spin,.counterspin,.core-pulse,.notification,.dock-terminal { animation:none !important; }
+  }
+</style><rect width="640" height="1000" rx="22" fill="url(#wall)" />
+    <svg width="640" height="1000" viewBox="0 0 1280 900" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="325" cy="570" rx="630" ry="670" fill="url(#ember)" />
+    <ellipse cx="1160" cy="700" rx="580" ry="740" fill="url(#blue)" />
+    <path d="M-90 815 C320 870 74 368 371 147 C674 -80 824 5 903 -87 C612 86 566 287 401 466 C276 604 302 867 -90 965Z" fill="url(#ribbon)" />
+    <path d="M-130 916 C455 1037 301 318 716 86" fill="none" stroke="#fac499" stroke-opacity=".3" stroke-width="1.5" />
+    <path d="M1240 956 C829 801 1313 344 1075 75 C1404 283 1106 607 1311 954Z" fill="#74b6b7" fill-opacity=".12" />
+    <path d="M1229 937 C968 677 1270 341 1116 113" fill="none" stroke="#abede2" stroke-opacity=".16" stroke-width="1.5" />
+    </svg><path d="M22 0 H618 Q640 0 640 22 V42 H0 V22 Q0 0 22 0Z" fill="#0b1320" fill-opacity=".57" /><text x="24" y="28" font-size="22" fill="#e7f7f1" font-weight="700" class="">◈</text><text x="59" y="28" font-size="18" fill="#edf2ff" font-weight="650" class="">ThierryOS</text><text x="612" y="28" font-size="16" fill="#c0d6cd" font-weight="400" class="" text-anchor="end">Always Tinkering</text><text x="28" y="91" font-size="15" fill="#d6c7cc" font-weight="600" class="" letter-spacing="1.5">THIERRY POPAT / SOFTWARE + ROBOTICS</text><text x="26" y="150" font-size="46" fill="#fff4ea" font-weight="700" class="" letter-spacing="-1.8">Watched Iron Man.</text><text x="26" y="202" font-size="46" fill="#fff4ea" font-weight="700" class="" letter-spacing="-1.8">Things escalated.</text><g transform="translate(24 238)"><g class="terminal-motion"><g filter="url(#shadow)"><rect width="592" height="307" rx="18" fill="url(#panel)" /><rect x=".75" y=".75" width="590.5" height="305.5" rx="17.25" fill="none" stroke="#c6d0ef" stroke-opacity=".2" stroke-width="1.5" /></g><path d="M1 53 H591" stroke="#fff" stroke-opacity=".08" /><circle cx="25" cy="27" r="6.5" fill="#ff615b" /><circle cx="47" cy="27" r="6.5" fill="#ffbd44" /><circle cx="69" cy="27" r="6.5" fill="#00c94e" /><text x="318.0" y="33" font-size="17" fill="#b9c0d5" font-weight="500" class="" text-anchor="middle">originStory.py — zsh</text><text x="26" y="94" font-size="21" fill="#a3e9ce" font-weight="500" class="mono">thierry@workshop ~ %</text><g class="typed"><text x="26" y="137" font-size="23" fill="#f2f0e9" font-weight="500" class="mono">python originStory.py</text></g><g class="output-one"><text x="26" y="187" font-size="22" fill="#e2e7ef" font-weight="400" class="mono">Watched Iron Man.</text></g><g class="output-two"><text x="26" y="222" font-size="22" fill="#e2e7ef" font-weight="400" class="mono">Wanted my own JARVIS.</text></g><g class="output-three"><text x="26" y="274" font-size="25" fill="#fff0d9" font-weight="600" class="">Still here. Still building.</text></g></g></g><g transform="translate(24 571)"><g class="jarvis-motion"><g filter="url(#shadow)"><rect width="592" height="283" rx="18" fill="url(#panel)" /><rect x=".75" y=".75" width="590.5" height="281.5" rx="17.25" fill="none" stroke="#c6d0ef" stroke-opacity=".2" stroke-width="1.5" /></g><path d="M1 53 H591" stroke="#fff" stroke-opacity=".08" /><circle cx="25" cy="27" r="6.5" fill="#ff615b" /><circle cx="47" cy="27" r="6.5" fill="#ffbd44" /><circle cx="69" cy="27" r="6.5" fill="#00c94e" /><text x="318.0" y="33" font-size="17" fill="#b9c0d5" font-weight="500" class="" text-anchor="middle">jarvis / the long game</text><g transform="translate(124 160) scale(0.7307692307692307)">
+      <circle r="120" fill="url(#core)" opacity=".22" class="core-pulse" />
+      <circle r="112" fill="none" stroke="#4e9587" stroke-opacity=".25" />
+      <g class="spin"><line x1="94.00" y1="0.00" x2="104.00" y2="0.00" stroke="#a6ffe3" stroke-width="2" /><line x1="98.15" y1="12.92" x2="103.11" y2="13.57" stroke="#44776f" stroke-width="2" /><line x1="95.63" y1="25.62" x2="100.46" y2="26.92" stroke="#44776f" stroke-width="2" /><line x1="91.46" y1="37.89" x2="96.08" y2="39.80" stroke="#44776f" stroke-width="2" /><line x1="81.41" y1="47.00" x2="90.07" y2="52.00" stroke="#a6ffe3" stroke-width="2" /><line x1="78.54" y1="60.27" x2="82.51" y2="63.31" stroke="#44776f" stroke-width="2" /><line x1="70.00" y1="70.00" x2="73.54" y2="73.54" stroke="#44776f" stroke-width="2" /><line x1="60.27" y1="78.54" x2="63.31" y2="82.51" stroke="#44776f" stroke-width="2" /><line x1="47.00" y1="81.41" x2="52.00" y2="90.07" stroke="#a6ffe3" stroke-width="2" /><line x1="37.89" y1="91.46" x2="39.80" y2="96.08" stroke="#44776f" stroke-width="2" /><line x1="25.62" y1="95.63" x2="26.92" y2="100.46" stroke="#44776f" stroke-width="2" /><line x1="12.92" y1="98.15" x2="13.57" y2="103.11" stroke="#44776f" stroke-width="2" /><line x1="0.00" y1="94.00" x2="0.00" y2="104.00" stroke="#a6ffe3" stroke-width="2" /><line x1="-12.92" y1="98.15" x2="-13.57" y2="103.11" stroke="#44776f" stroke-width="2" /><line x1="-25.62" y1="95.63" x2="-26.92" y2="100.46" stroke="#44776f" stroke-width="2" /><line x1="-37.89" y1="91.46" x2="-39.80" y2="96.08" stroke="#44776f" stroke-width="2" /><line x1="-47.00" y1="81.41" x2="-52.00" y2="90.07" stroke="#a6ffe3" stroke-width="2" /><line x1="-60.27" y1="78.54" x2="-63.31" y2="82.51" stroke="#44776f" stroke-width="2" /><line x1="-70.00" y1="70.00" x2="-73.54" y2="73.54" stroke="#44776f" stroke-width="2" /><line x1="-78.54" y1="60.27" x2="-82.51" y2="63.31" stroke="#44776f" stroke-width="2" /><line x1="-81.41" y1="47.00" x2="-90.07" y2="52.00" stroke="#a6ffe3" stroke-width="2" /><line x1="-91.46" y1="37.89" x2="-96.08" y2="39.80" stroke="#44776f" stroke-width="2" /><line x1="-95.63" y1="25.62" x2="-100.46" y2="26.92" stroke="#44776f" stroke-width="2" /><line x1="-98.15" y1="12.92" x2="-103.11" y2="13.57" stroke="#44776f" stroke-width="2" /><line x1="-94.00" y1="0.00" x2="-104.00" y2="0.00" stroke="#a6ffe3" stroke-width="2" /><line x1="-98.15" y1="-12.92" x2="-103.11" y2="-13.57" stroke="#44776f" stroke-width="2" /><line x1="-95.63" y1="-25.62" x2="-100.46" y2="-26.92" stroke="#44776f" stroke-width="2" /><line x1="-91.46" y1="-37.89" x2="-96.08" y2="-39.80" stroke="#44776f" stroke-width="2" /><line x1="-81.41" y1="-47.00" x2="-90.07" y2="-52.00" stroke="#a6ffe3" stroke-width="2" /><line x1="-78.54" y1="-60.27" x2="-82.51" y2="-63.31" stroke="#44776f" stroke-width="2" /><line x1="-70.00" y1="-70.00" x2="-73.54" y2="-73.54" stroke="#44776f" stroke-width="2" /><line x1="-60.27" y1="-78.54" x2="-63.31" y2="-82.51" stroke="#44776f" stroke-width="2" /><line x1="-47.00" y1="-81.41" x2="-52.00" y2="-90.07" stroke="#a6ffe3" stroke-width="2" /><line x1="-37.89" y1="-91.46" x2="-39.80" y2="-96.08" stroke="#44776f" stroke-width="2" /><line x1="-25.62" y1="-95.63" x2="-26.92" y2="-100.46" stroke="#44776f" stroke-width="2" /><line x1="-12.92" y1="-98.15" x2="-13.57" y2="-103.11" stroke="#44776f" stroke-width="2" /><line x1="-0.00" y1="-94.00" x2="-0.00" y2="-104.00" stroke="#a6ffe3" stroke-width="2" /><line x1="12.92" y1="-98.15" x2="13.57" y2="-103.11" stroke="#44776f" stroke-width="2" /><line x1="25.62" y1="-95.63" x2="26.92" y2="-100.46" stroke="#44776f" stroke-width="2" /><line x1="37.89" y1="-91.46" x2="39.80" y2="-96.08" stroke="#44776f" stroke-width="2" /><line x1="47.00" y1="-81.41" x2="52.00" y2="-90.07" stroke="#a6ffe3" stroke-width="2" /><line x1="60.27" y1="-78.54" x2="63.31" y2="-82.51" stroke="#44776f" stroke-width="2" /><line x1="70.00" y1="-70.00" x2="73.54" y2="-73.54" stroke="#44776f" stroke-width="2" /><line x1="78.54" y1="-60.27" x2="82.51" y2="-63.31" stroke="#44776f" stroke-width="2" /><line x1="81.41" y1="-47.00" x2="90.07" y2="-52.00" stroke="#a6ffe3" stroke-width="2" /><line x1="91.46" y1="-37.89" x2="96.08" y2="-39.80" stroke="#44776f" stroke-width="2" /><line x1="95.63" y1="-25.62" x2="100.46" y2="-26.92" stroke="#44776f" stroke-width="2" /><line x1="98.15" y1="-12.92" x2="103.11" y2="-13.57" stroke="#44776f" stroke-width="2" /><circle r="82" fill="none" stroke="#9cf6d9" stroke-width="4" stroke-dasharray="93 28 25 28" /></g>
+      <g class="counterspin"><circle r="69" fill="none" stroke="#50bfa9" stroke-width="2" stroke-dasharray="104 19 4 19" /></g>
+      <circle r="59" fill="#122f32" stroke="#5da799" />
+      <circle r="50" fill="url(#core)" class="core-pulse" />
+      <path d="M-29 -17 L29 -17 L0 32 Z" fill="#b6ffe6" fill-opacity=".14" stroke="#d3ffed" stroke-width="3" stroke-linejoin="round" />
+      <path d="M-15 -9 L15 -9 L0 16 Z" fill="#e8fff3" />
+    </g><text x="247" y="128" font-size="20" fill="#b6c9c6" font-weight="500" class="">The original ambition.</text><text x="247" y="169" font-size="29" fill="#dcffed" font-weight="650" class="">My own JARVIS.</text><text x="247" y="211" font-size="19" fill="#a1bcb9" font-weight="400" class="">A movie. A spark.</text><text x="247" y="240" font-size="19" fill="#a1bcb9" font-weight="400" class="">Years of building.</text></g></g><g transform="translate(196.5 891)">
+    <rect width="247" height="82" rx="24" fill="url(#dock)" stroke="#fff" stroke-opacity=".23" />
+    <g transform="translate(14 10)"><g class="dock-terminal"><rect width="58" height="58" rx="14" fill="#252b37" stroke="#9ca7bd" stroke-opacity=".4" />
+      <path d="M13 17 L24 27 L13 37 M30 38 H43" fill="none" stroke="#dbf2eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></g></g>
+    <g transform="translate(91 10)"><rect width="58" height="58" rx="14" fill="#236662" />
+      <circle cx="29" cy="29" r="18" fill="none" stroke="#9af8d8" stroke-width="2" stroke-dasharray="25 5" />
+      <path d="M20 23 H38 L29 39Z" fill="#c9ffea" /></g>
+    <g transform="translate(168 10)"><rect width="58" height="58" rx="14" fill="#f1dec6" /><path d="M0 16 V14 Q0 0 14 0 H44 Q58 0 58 14 V16Z" fill="#e6b779" />
+      <path d="M13 29 H45 M13 38 H42 M13 47 H31" stroke="#ae9179" stroke-width="2" stroke-linecap="round" /></g>
+    <circle cx="43" cy="74" r="2" fill="#e3f2ef" /><circle cx="120" cy="74" r="2" fill="#e3f2ef" /><circle cx="197" cy="74" r="2" fill="#e3f2ef" />
+    </g></svg>
